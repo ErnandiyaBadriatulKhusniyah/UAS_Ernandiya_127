@@ -3,7 +3,7 @@ const router = express.Router();
 const { Pasien, RawatInap, Kamar } = require('../models');
 const { authenticate, authorize } = require('../middleware/auth');
 
-// Endpoint untuk menampilkan semua data Pasien
+// Endpoint untuk menampilkan semua data Pasien, hanya petugas & dokter yang bisa akses
 router.get('/', authenticate, authorize(['petugas', 'dokter']), async (req, res, next) => {
     try {
         const pasien = await Pasien.findAll();
