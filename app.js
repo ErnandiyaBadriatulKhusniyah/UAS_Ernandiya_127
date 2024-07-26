@@ -14,7 +14,7 @@ var rawatInapRouter = require('./routes/rawatInap');
 
 var app = express();
 var port = process.env.port
-app.use(port, "0.0.0.0", () => {
+app.use(port, () => {
   console.log("API berjalan di : "+port);
 });
 
