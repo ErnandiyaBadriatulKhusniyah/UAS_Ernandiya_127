@@ -18,7 +18,6 @@ app.use(port, () => {
   console.log("API berjalan di : "+port);
 });
 
-app.use(cors());
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
