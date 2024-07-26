@@ -1,9 +1,19 @@
 const {Sequelize} = require('sequelize');
 const rawatInap = require('./rawatInap');
-const sequelize = new Sequelize('uasDpsiNandiYa', 'root', '', {
-    host: 'localhost',
-    dialect: 'mysql'
-});
+
+const sequelize = new Sequelize(
+    "bq2jz2dsp5kioulkywfq",
+    "uhowlagtioum92jr",
+    "YawlrQUIvyc44IaLgQh7",
+    {
+      host: "bq2jz2dsp5kioulkywfq-mysql.services.clever-cloud.com",
+      dialect: "mysql",
+      logging: false,
+      dialectOptions: {
+        connectTimeout: 60000, // Timeout 60 detik
+      },
+    }
+  );
 
 //define models
 const Akun = require('./akun')(sequelize, Sequelize.DataTypes);
